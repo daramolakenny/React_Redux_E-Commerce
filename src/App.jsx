@@ -11,7 +11,6 @@ import FilteredProducts from './components/FilteredProducts';
 import SingleProducts from './components/SingleProducts';
 
 function App() {
-
   return (
     <div>
       <Routes>
