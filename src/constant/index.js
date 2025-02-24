@@ -38,36 +38,56 @@ export const Categorylist = [
 // export const natural = natural;
 // export const Iconic = iconic;
 
-import bcanva from '../assets/collections/bcanva.jpg';
-import canvas from '../assets/collections/canvas.jpg';
-import hat from '../assets/collections/hat.jpg';
-import roundneck from '../assets/collections/roundneck.jpg';
-import white from '../assets/collections/white.jpg';
+
+import Bag1 from '../assets/Bags/Bag1.jpg'
+import Bag2 from '../assets/Bags/Bag2.jpg'
+import Bag3 from '../assets/Bags/Bag3.jpg'
+import cap1 from '../assets/cap/cap1.jpg'
+import cap2 from '../assets/cap/cap2.jpg'
+import cap3 from '../assets/cap/cap3.jpg'
+import roundneck2 from '../assets/clothes/roundneck2.jpg'
+import Roundneck1 from '../assets/clothes/Roundneck1.jpg'
+import Polo1 from '../assets/clothes/Polo1.jpg'
+import cloth1 from '../assets/clothes/cloth1.jpg'
+import hat from '../assets/cap/hat.jpg';
+import shoe1 from '../assets/shoes/shoe1.jpg';
+import shoe2 from '../assets/shoes/shoe2.jpg';
+import shoe3 from '../assets/shoes/shoe3.jpg';
+import shoe4 from '../assets/shoes/shoe4.jpg';
+import shoe5 from '../assets/shoes/shoe5.jpg';
+import watch1 from '../assets/watch/watch1.jpg';
+import watch2 from '../assets/watch/watch2.jpg';
+import watch3 from '../assets/watch/watch3.jpg';
+import watch4 from '../assets/watch/watch4.jpg';
+import cardigown1 from '../assets/jack/cardigown1.jpg'
+import cardigown2 from '../assets/jack/cardigown2.jpg'
+import cardigown3 from '../assets/jack/cardigown3.jpg'
+import cardigown4 from '../assets/jack/cardigown4.jpg'
 
 export const sliderColections = [
     {
         id: 0,
-        img: bcanva,
+        img: shoe1,
         text: 'Modern Bag',
     },
     {
         id: 1,
-        img: canvas,
+        img: shoe4,
         text: 'Cute modern Canvas',
     },
     {
         id: 2,
-        img: hat,
+        img: cardigown4,
         text: 'Modern Hat',
     },
     {
         id: 3,
-        img: roundneck,
+        img: watch2,
         text: 'Beautiful roundneck',
     },
     {
         id: 4,
-        img: white,
+        img: cap3,
         text: 'Nice watch collection',
     },
 ];
@@ -75,7 +95,7 @@ export const sliderColections = [
 export const storeData = [
     {
         id: 0,
-        img: "",
+        img: Bag1,
         name: "Fashion Bag",
         text: "Female fashion bag",
         type: "Bags",
@@ -86,7 +106,7 @@ export const storeData = [
     },
     {
         id: 1,
-        img: "",
+        img: Bag2,
         name: "Fashion Bag",
         text: "Female fashion bag",
         type: "Bags",
@@ -97,10 +117,10 @@ export const storeData = [
     },
     {
         id: 2,
-        img: canvas,
-        name: "Nice Shoe",
-        text: "Normal hill shoe",
-        type: "Shoes",
+        img: Bag3,
+        name: "Fashion Bag",
+        text: "Female fashion bag",
+        type: "Bags",
         size: ['S', 'M', 'L', 'XL'],
         color: ['Grey', 'blue'],
         gender: "Male",
@@ -108,7 +128,7 @@ export const storeData = [
     },
     {
         id: 3,
-        img: canvas,
+        img: shoe2,
         name: "Nice Shoe",
         text: "Normal hill shoe",
         type: "Shoes",
@@ -119,7 +139,51 @@ export const storeData = [
     },
     {
         id: 4,
-        img: "",
+        img: shoe3,
+        name: "Nice Shoe",
+        text: "Normal hill shoe",
+        type: "Shoes",
+        size: ['S', 'M', 'L', 'XL'],
+        color: ['Grey', 'blue'],
+        gender: "Male",
+        price: 20,
+    },
+    {
+        id: 5,
+        img: shoe4,
+        name: "Nice Shoe",
+        text: "Normal hill shoe",
+        type: "Shoes",
+        size: ['S', 'M', 'L', 'XL'],
+        color: ['Grey', 'blue'],
+        gender: "Male",
+        price: 20,
+    },
+    {
+        id: 6,
+        img: shoe5,
+        name: "Nice Shoe",
+        text: "Normal hill shoe",
+        type: "Shoes",
+        size: ['S', 'M', 'L', 'XL'],
+        color: ['Grey', 'blue'],
+        gender: "Male",
+        price: 20,
+    },
+    {
+        id: 7,
+        img: shoe1,
+        name: "Nice Shoe",
+        text: "Normal hill shoe",
+        type: "Shoes",
+        size: ['S', 'M', 'L', 'XL'],
+        color: ['Grey', 'blue'],
+        gender: "Male",
+        price: 20,
+    },
+    {
+        id: 8,
+        img: watch4,
         name: "Cute Suit",
         text: "Fashionist Suit",
         type: "Suits",
@@ -129,88 +193,44 @@ export const storeData = [
         price: 20,
     },
     {
-        id: 5,
-        img: "",
+        id: 9,
+        img: watch1,
         name: "Cute Suit",
         text: "Fashionist Suit",
         type: "Suits",
         size: ['S', 'M', 'L', 'XL'],
-        color: ['White', 'blue'],
-        gender: "Male",
-        price: 20,
-    },
-    {
-        id: 6,
-        img: "",
-        name: "Cool Jacket",
-        text: "Fashionista Jacket",
-        type: "Jackets",
-        size: ['S', 'M', 'L', 'XL'],
-        color: ['black', 'blue'],
-        gender: "Male",
-        price: 20,
-    },
-    {
-        id: 7,
-        img: "",
-        name: "Cool Jacket",
-        text: "Fashionista Jacket",
-        type: "Jackets",
-        size: ['S', 'M', 'L', 'XL'],
-        color: ['black', 'blue'],
-        gender: "Male",
-        price: 20,
-    },
-    {
-        id: 8,
-        img: "",
-        name: "Mens cute Jeans",
-        text: "",
-        type: "Jeans",
-        size: ['S', 'M', 'L', 'XL'],
-        color: ['black', 'blue'],
-        gender: "Male",
-        price: 20,
-    },
-    {
-        id: 9,
-        img: "",
-        name: "Mens cute Jeans",
-        text: "",
-        type: "Jeans",
-        size: ['S', 'M', 'L', 'XL'],
-        color: ['black', 'blue'],
+        color: ['Grey', 'blue'],
         gender: "Male",
         price: 20,
     },
     {
         id: 10,
-        img: hat,
-        name: "cute Hat",
-        text: "Fashion hat",
-        type: "Hat",
+        img: watch2,
+        name: "Cute Suit",
+        text: "Fashionist Suit",
+        type: "Suits",
         size: ['S', 'M', 'L', 'XL'],
-        color: ['black', 'red', 'green'],
-        gender: "Female",
+        color: ['Grey', 'blue'],
+        gender: "Male",
         price: 20,
     },
     {
         id: 11,
-        img: hat,
-        name: "cute Hat",
-        text: "Fashion hat",
-        type: "Hat",
+        img: watch3,
+        name: "Cute Suit",
+        text: "Fashionist Suit",
+        type: "Suits",
         size: ['S', 'M', 'L', 'XL'],
-        color: ['black', 'red', 'green'],
+        color: ['Grey', 'blue'],
         gender: "Male",
         price: 20,
     },
     {
         id: 12,
-        img: "",
-        name: "Casual T-shirt",
-        text: "Normal and cute T-shirt",
-        type: "T-shirt",
+        img: cap1,
+        name: "cute Hat",
+        text: "Fashion hat",
+        type: "Hat",
         size: ['S', 'M', 'L', 'XL'],
         color: ['black', 'red', 'green'],
         gender: "Female",
@@ -218,10 +238,10 @@ export const storeData = [
     },
     {
         id: 13,
-        img: "",
-        name: "Casual T-shirt",
-        text: "Normal and cute T-shirt",
-        type: "T-shirt",
+        img: cap2,
+        name: "cute Hat",
+        text: "Fashion hat",
+        type: "Hat",
         size: ['S', 'M', 'L', 'XL'],
         color: ['black', 'red', 'green'],
         gender: "Female",
@@ -229,10 +249,10 @@ export const storeData = [
     },
     {
         id: 14,
-        img: "",
-        name: "Casual roundneck",
-        text: "Casual roundneck top",
-        type: "Roundneck",
+        img: cap3,
+        name: "cute Hat",
+        text: "Fashion hat",
+        type: "Hat",
         size: ['S', 'M', 'L', 'XL'],
         color: ['black', 'red', 'green'],
         gender: "Female",
@@ -240,8 +260,8 @@ export const storeData = [
     },
     {
         id: 15,
-        img: "",
-        name: "Casual roundneck",
+        img: Polo1,
+        name: "Roundneck1",
         text: "Casual roundneck top",
         type: "Roundneck",
         size: ['S', 'M', 'L', 'XL'],
@@ -251,8 +271,8 @@ export const storeData = [
     },
     {
         id: 16,
-        img: "",
-        name: "Casual roundneck",
+        img: Roundneck1,
+        name: "Roundneck1",
         text: "Casual roundneck top",
         type: "Roundneck",
         size: ['S', 'M', 'L', 'XL'],
@@ -262,39 +282,28 @@ export const storeData = [
     },
     {
         id: 17,
-        img: "",
-        name: "Fashion Bag",
-        text: "Female fashion bag",
-        type: "Bags",
+        img: roundneck2,
+        name: "roundneck2",
+        text: "Casual roundneck top",
+        type: "Roundneck",
         size: ['S', 'M', 'L', 'XL'],
-        color: ['Grey', 'blue'],
-        gender: "Male",
+        color: ['black', 'red', 'green'],
+        gender: "Female",
         price: 20,
     },
     {
         id: 18,
-        img: canvas,
-        name: "Nice Shoe",
-        text: "Normal hill shoe",
-        type: "Shoes",
+        img: cloth1,
+        name: "Cloth",
+        text: "Casual roundneck top",
+        type: "Roundneck",
         size: ['S', 'M', 'L', 'XL'],
-        color: ['Grey', 'blue'],
-        gender: "Male",
+        color: ['black', 'red', 'green'],
+        gender: "Female",
         price: 20,
     },
     {
         id: 19,
-        img: "",
-        name: "Cute Suit",
-        text: "Fashionist Suit",
-        type: "Suits",
-        size: ['S', 'M', 'L', 'XL'],
-        color: ['Grey', 'blue'],
-        gender: "Male",
-        price: 20,
-    },
-    {
-        id: 20,
         img: hat,
         name: "cute Hat",
         text: "Fashion hat",
@@ -305,22 +314,33 @@ export const storeData = [
         price: 20,
     },
     {
-        id: 21,
-        img: "",
-        name: "Casual T-shirt",
-        text: "Normal and cute T-shirt",
-        type: "T-shirt",
+        id: 20,
+        img: cardigown4,
+        name: "Cool Jacket",
+        text: "Fashionista Jacket",
+        type: "Jackets",
         size: ['S', 'M', 'L', 'XL'],
-        color: ['black', 'red', 'green'],
-        gender: "Female",
+        color: ['black', 'blue'],
+        gender: "Male",
+        price: 20,
+    },
+    {
+        id: 21,
+        img: cardigown1,
+        name: "Cool Jacket",
+        text: "Fashionista Jacket",
+        type: "Jackets",
+        size: ['S', 'M', 'L', 'XL'],
+        color: ['black', 'blue'],
+        gender: "Male",
         price: 20,
     },
     {
         id: 22,
-        img: "",
-        name: "Mens cute Jeans",
-        text: "",
-        type: "Jeans",
+        img: cardigown2,
+        name: "Cool Jacket",
+        text: "Fashionista Jacket",
+        type: "Jackets",
         size: ['S', 'M', 'L', 'XL'],
         color: ['black', 'blue'],
         gender: "Male",
@@ -328,7 +348,7 @@ export const storeData = [
     },
     {
         id: 23,
-        img: "",
+        img: cardigown3,
         name: "Cool Jacket",
         text: "Fashionista Jacket",
         type: "Jackets",

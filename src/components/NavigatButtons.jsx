@@ -1,5 +1,5 @@
 import React from 'react';
-import clothes from '../assets/products/clothes.webp';
+import clothes from '../assets/clothes.webp';
 import { filteredProducts } from '../features/slicers/productslice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
