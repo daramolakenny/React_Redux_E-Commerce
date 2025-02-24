@@ -20,6 +20,9 @@ const SingleProducts = () => {
     ? product.find((prod) => prod.id === productId)
     : product;
     
+    const productColor = selectedProduct && selectedProduct.color
+    const [color, setColor] = useState(productColor);
+    
     // Set the initial size based on the first product's size array
     const productSize = selectedProduct && selectedProduct.size && selectedProduct.size.length > 0 
     ? selectedProduct.size[0] 
@@ -28,6 +31,14 @@ const SingleProducts = () => {
     console.log('size', size);
         
     console.log('SingleProduct', selectedProduct);
+
+    const handleChange = (e) => {
+        setSize(e.target.value);
+    }
+    
+    const handleColorChange = (e) => {
+        setColor(e.target.value);
+    }
 
     return (
         <div>
@@ -47,62 +58,103 @@ const SingleProducts = () => {
                             <p className='text-gray-500 text-xl font-bold tracking-normal leading-none pb-4'>{selectedProduct.text}</p>
                             {/* <p className='font-bold tracking-normal leading-none pb-4'>Price: ${selectedProduct.price}</p> */}
                         </div>
-                        <div className='pb-4'>
-                            {selectedProduct.size ? 
-                                <div>
-                                <label 
-                                    id='size'
-                                    name='size'
-                                    value= {size}
-                                    onChange={(e) => setSize(e.target.value)}
-                                    htmlFor="countries"
-                                    className='black mb-2 text-sm font-medium text-gray-500 dark:text-white'
+                        <div className='pb-2 flex w-[25%] '>
+                            <div className='w-[35%]'>
+                                {selectedProduct.size ? ( 
+                                    <div>
+                                        <label
+                                            htmlFor="size"
+                                            className='black mb-2 text-lg font-medium text-gray-500 dark:text-white'
+                                        >
+                                            Size
+                                        </label>
+                                        <div>
+                                            <select
+                                                id='size'
+                                                name='size'
+                                                value={size}
+                                                onChange={handleChange}
+                                                className='bg-gray-50 border outline-none border-gray-100 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 black w-full p-2.5'>
+                                                {/* mapping through the size of the product */}
+                                                {selectedProduct.size.map((item, index) => (
+                                                    <option key={index} value={item}>
+                                                        {item}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    </div> 
+                                    ) : (
+                                    <div>
+                                        <label
+                                            htmlFor="size"
+                                            className='black mb-2 text-lg font-medium text-gray-500 dark:text-white'
+                                        >
+                                            Size
+                                        </label>
+                                        <div>
+                                            <select
+                                                id='size'
+                                                disabled={true}
+                                                name='size'
+                                                value={size}
+                                                onChange={handleChange}
+                                                className='bg-gray-50 border border-gray-100 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 black w-[10%] p-2.5'>
+                                                {/* mapping through the size of the product */}
+                                                {selectedProduct.size.map((item, index) => (
+                                                    <option key={index} value={item}>
+                                                        {item}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    </div> )
+                                }
+                            </div>
+
+                            <div className='w-[45%] ml-4'>
+                                <label
+                                    htmlFor="color"
+                                    className='black mb-2 text-lg font-medium text-gray-500 dark:text-white'
                                 >
-                                    Pick a size
+                                    Color
                                 </label>
                                 <div>
-                                <select
-                                    name='size'
-                                    className='bg-gray-50 border border-gray-100 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 black w-[30%] p-2.5'>
-                                    {/* mapping through the size of the product */}
-                                    {selectedProduct.size.map((item, index) => (
-                                        <option key={index} value={item}>
-                                            {item}
-                                        </option>
-                                    ))}
-                                </select>
-
-                                </div>
-                            </div> 
-                                : 
-                                <div>
-                                    <label 
-                                        htmlFor="countries"
-                                        className='black mb-2 text-sm font-medium text-gray-500 dark:text-white'
-                                    >
-                                        Pick a size
-                                    </label>
-                                    <div>
-                                    <select className='bg-gray-50 border border-gray-100 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 black w-[30%] p-2.5'>
+                                    <select
+                                        id='color'
+                                        // disabled={true}
+                                        name='color'
+                                        value={color}
+                                        onChange={handleColorChange}
+                                        className='bg-gray-50 border border-gray-100 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 black w-full p-2.5'>
                                         {/* mapping through the size of the product */}
-                                        {selectedProduct.size.map((item, index) => (
+                                        {selectedProduct.color.map((item, index) => (
                                             <option key={index} value={item}>
                                                 {item}
                                             </option>
                                         ))}
                                     </select>
-
-                                    </div>
                                 </div>
-                            }
+                            </div>
                         </div>
+
+                        <div>
+                        </div>
+                        <div className=''>
+                            <button
+                                className='border border-gray-400 py-2 px-8 rounded-lg text-gray-500 cursor-pointer hover:bg-gray-500 hover:text-gray-50'
+                            >
+                                Add To Cart
+                            </button>
+                        </div>
+                    
                     </div>
                 </div>
             ) : (
                 <p>Product not found</p>
             )}
         </div>
-    );
+    )
 };
 
 export default SingleProducts;
