@@ -11,14 +11,21 @@ const ProductCard = ({id, name, img, text, type, price, color, gender, size}) =>
   return (
     <Link to={`/filteredProducts/${paramsType}/` + id}>
       <div className='w-96 border flex flex-col gap-4' onClick={() => dispatch(singleProduct(id))}>
-        <div className='relative bg-blue-400'>
-          <img src={img} alt="" />
+        <div className='bg-blue-400 border border-red-400'>
+          <img 
+            src={img} 
+            alt="" 
+            className='w-full'
+          />
         </div> 
-        <div className='grid grid-cols-2 text-center'>
+        <div className='w-full border text-center'>
           <div className='mb-2'>
-              <h2>{name}</h2>
-              <p>{text}</p>
-              <p>{price}</p>
+              <h2 className='text-center items-center justify-center flex'>{name}</h2>
+              <p className=''>{text}</p>
+              <div className='flex justify-between px-6'>
+                <p>{price}</p>
+                <p>{color}</p>
+              </div>
           </div>
         </div>
       </div>
