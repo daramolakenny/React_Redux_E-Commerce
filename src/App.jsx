@@ -17,6 +17,7 @@ function App() {
         <Route path='/filteredProducts/:type' element={<FilteredProducts />} />
         <Route path='/filteredProducts/:type/:id' element={<SingleProducts />} />
       </Routes>
+      {/* <Carticon /> */}
     </div>
   )
 }
