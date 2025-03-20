@@ -1,9 +1,12 @@
 import React,{useState} from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { addToCart } from '../features/slicers/CartSlice';
+import { useDispatch } from 'react-redux';
 
 const SingleProducts = () => {
     const product = useSelector((state) => state.products.singleProduct);
+    const dispatch = useDispatch();
     
     // const productSize = product(0).size ? product(0).size(0) : "";
     // const [size, setSize] = useState(productSize);
@@ -43,7 +46,7 @@ const SingleProducts = () => {
     return (
         <div>
             {selectedProduct ? (
-                <div className='flex justify-center items-center py-10'>
+                <div className='flex flex-wrap justify-center items-center py-10'>
                     <div className='pl-44 grow-[2]'>
                         <img 
                             className='h-[650px] w-96 rounded-lg' 
@@ -62,7 +65,7 @@ const SingleProducts = () => {
                             <div className='w-[35%]'>
                                 {selectedProduct.size ? ( 
                                     <div>
-                                        <label
+                                          <label
                                             htmlFor="size"
                                             className='black mb-2 text-lg font-medium text-gray-500 dark:text-white'
                                         >
@@ -143,6 +146,15 @@ const SingleProducts = () => {
                         <div className=''>
                             <button
                                 className='border border-gray-400 py-2 px-8 rounded-lg text-gray-500 cursor-pointer hover:bg-gray-500 hover:text-gray-50'
+                                onClick={() => dispatch(addToCart({
+                                    id: selectedProduct.id,
+                                    name: selectedProduct.name,
+                                    size: size,
+                                    color: color,
+                                    price: selectedProduct.price,
+                                    amount: 1,
+                                    totalPrice: selectedProduct.price,
+                                }))}
                             >
                                 Add To Cart
                             </button>

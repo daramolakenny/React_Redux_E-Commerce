@@ -9,7 +9,7 @@ const Slider = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className='mt-20 pb-6 relative'>
+    <div className='pb-6 bg-black relative'>
       <div className=''>
         {sliderColections.map((items, id) => (
           <div key={items.id} className={parseInt(items.id) === sliderIndex ? 'opacity-100 duration-700 ease-in-out scale-100' : 'opacity-0 duration-700 ease-in-out scale-90'}>
