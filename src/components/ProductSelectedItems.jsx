@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../features/slicers/cartSlice';
+import { addToCart } from '../features/slicers/cartslice';
 
 const ProductSelectedItems = ({ id, img, name, text, size, price, color, totalPrice }) => {
 
