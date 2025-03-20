@@ -12,8 +12,10 @@ export const cartSlice = createSlice({
         addToCart(state, action) {
             const productId = action.payload;
             try {
-                const exist = state.cart.find((product) => product.id === productId.id &&
-                product.size === productId.size && product.color === product.color 
+                const exist = state.cart.find((product) => 
+                    product.id === productId.id &&
+                    product.size === productId.size && 
+                    product.color === productId.color 
                 );
 
                 if(exist) {
