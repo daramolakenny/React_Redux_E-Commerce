@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { addToCart } from '../features/slicers/cartSlice';
+import { addToCart } from '../features/slicers/cartslice';
 import { useDispatch } from 'react-redux';
 
 const SingleProducts = () => {
